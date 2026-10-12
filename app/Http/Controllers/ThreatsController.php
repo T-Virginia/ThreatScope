@@ -1,26 +1,19 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Http\Requests\ThreatLookupRequest;
 use Illuminate\Support\Facades\Validator;
 
 class ThreatsController extends Controller
 {
-    public function threats($ip){
 
-        $data = ['ip' => $ip];
+public function threats(ThreatLookupRequest $request)
+    {
+    
+    $ip = $request->validated('ip');
 
-        $rules = ['ip' => 'required|ip'];
-
-        $messages = ['ip.ip' => 'Deve essere un ip valido'];
-
-        $validator = Validator::make($data, $rules, $messages);
-
-        if($validator->fails()){
-              return response()->json($validator->errors(), 400);
-        } else {
-
-            return view('threats', ['ip' => $ip]);
-        }
-
+    return view('threats', ['ip' => $ip]);
+    
     }
 }
