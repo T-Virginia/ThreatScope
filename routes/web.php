@@ -12,5 +12,6 @@ Route::get('/dashboard', [DashboardController::class, 'dashboard']);
 
 Route::controller(ThreatsController::class)->group(function ()
 {
+    Route::get('/history', 'history');
     Route::get('/threats/{ip}', 'threats');
 });

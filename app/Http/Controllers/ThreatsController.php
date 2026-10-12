@@ -11,7 +11,6 @@ class ThreatsController extends Controller
 
 public function threats(ThreatLookupRequest $request)
     {
-    
     $ip = $request->validated('ip');
 
     $nuovoIp = new ThreatLookup();
@@ -20,6 +19,17 @@ public function threats(ThreatLookupRequest $request)
 
     return view('threats', ['ip' => $ip]);
 
+    }
 
+public function history()
+    {
+
+    $records = ThreatLookup::query()
+    ->orderBy('created_at', 'desc')
+    ->limit(10)
+    ->get();
+
+
+    return view('threats-history', ['records' => $records]);
     }
 }
