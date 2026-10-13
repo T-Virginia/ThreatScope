@@ -8,10 +8,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', [DashboardController::class, 'dashboard']);
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'dashboard']);
+    Route::get('/history', [ThreatsController::class, 'history']);
+});
 
 Route::controller(ThreatsController::class)->group(function ()
 {
-    Route::get('/history', 'history');
     Route::get('/threats/{ip}', 'threats');
 });
