@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ThreatLookupRequest;
 use App\Models\ThreatLookup;
-use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
 
 class ThreatsController extends Controller
 {
@@ -12,10 +12,16 @@ class ThreatsController extends Controller
 public function threats(ThreatLookupRequest $request)
     {
     $ip = $request->validated('ip');
+    $user = Auth::user();
 
-    $nuovoIp = new ThreatLookup();
-    $nuovoIp->ip_address = $ip;
-    $nuovoIp->save();
+    if (!$user) {
+        abort(401);
+    }
+
+    $user->threatLookups()->create([
+        'ip_address' => $ip,
+    ]);
+
 
     return view('threats', ['ip' => $ip]);
 
@@ -24,11 +30,11 @@ public function threats(ThreatLookupRequest $request)
 public function history()
     {
 
-    $records = ThreatLookup::query()
-    ->orderBy('created_at', 'desc')
-    ->limit(10)
-    ->get();
-
+    $records = Auth::user()
+        ->threatLookups()
+        ->orderBy('created_at', 'desc')
+        ->limit(10)
+        ->get();
 
     return view('threats-history', ['records' => $records]);
     }

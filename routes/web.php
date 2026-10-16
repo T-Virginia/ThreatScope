@@ -11,9 +11,7 @@ Route::get('/', function () {
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'dashboard']);
     Route::get('/history', [ThreatsController::class, 'history']);
-});
-
-Route::controller(ThreatsController::class)->group(function ()
-{
-    Route::get('/threats/{ip}', 'threats');
-});
+    Route::get('/threats/{ip}', [ThreatsController::class, 'threats']);
+    });
+    
+   
