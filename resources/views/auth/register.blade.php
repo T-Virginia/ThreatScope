@@ -12,11 +12,11 @@
             <label for="password_confirmation">Conferma la tua password</label>
             <input type="password" id="password_confirmation" name="password_confirmation" required>
             <button type="submit">Registrami</button>
-    @if ($errors->any())
-        @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-        @endforeach
-    @endif
-        </form>    
+            @if ($errors->any())
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            @endif
+        </form>
     </main>
 </div>
