@@ -38,7 +38,14 @@ class ThreatsController extends Controller
 
     public function showApi(string $ip)
     {
-        $user = Auth::user();
+        $user = request()->user();
+
+        if (!$user) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Non autenticato.',
+            ], 401);
+        }
 
         $lookup = $user->threatLookups()
             ->where('ip_address', $ip)
@@ -46,18 +53,18 @@ class ThreatsController extends Controller
 
         if (!$lookup) {
             return response()->json([
-            'success' => false,
-            'message' => 'Risorsa non trovata o richiesta non valida.'
-        ], 404);
-        } else {
-            return response()->json([
-                'success' => true,
-                'message' => 'Ip trovato.',
-                'data' => [
-                    'id' => $lookup->id,
-                    'ip_address' => $lookup->ip_address,
-                ]
-            ]);
+                'success' => false,
+                'message' => 'Risorsa non trovata.',
+            ], 404);
         }
+
+        return response()->json([
+            'success' => true,
+            'message' => 'IP trovato.',
+            'data' => [
+                'id' => $lookup->id,
+                'ip_address' => $lookup->ip_address,
+            ],
+        ]);
     }
 }
