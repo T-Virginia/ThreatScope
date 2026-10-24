@@ -1,58 +1,94 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# ThreatScope
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**Dashboard di Threat Intelligence sviluppata con Laravel.**
 
-## About Laravel
+ThreatScope è un'applicazione web che permette di verificare la reputazione degli indirizzi IP tramite AbuseIPDB, salvare i risultati nel database e consultare una cronologia personale delle ricerche.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Il progetto nasce con l'obiettivo di approfondire Laravel, lo sviluppo di API REST, l'autenticazione e la sicurezza delle applicazioni web.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Funzionalità
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Registrazione, login e logout degli utenti.
+- Validazione degli indirizzi IPv4 e IPv6.
+- Integrazione con l'API di AbuseIPDB.
+- Salvataggio dei risultati relativi alla reputazione degli IP in un database MySQL.
+- Cronologia delle ricerche separata per utente.
+- API REST protetta tramite Laravel Sanctum.
+- Gestione degli errori di validazione e dei problemi del servizio esterno.
+- Test automatici delle principali funzionalità.
 
-## Learning Laravel
+## Tecnologie utilizzate
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **PHP** — linguaggio di programmazione.
+- **Laravel** — framework per lo sviluppo dell'applicazione.
+- **MySQL** — database relazionale.
+- **Eloquent ORM** — gestione dei dati e delle relazioni tra modelli.
+- **Laravel Sanctum** — autenticazione tramite token per l'API.
+- **AbuseIPDB API** — servizio esterno per la reputazione degli indirizzi IP.
+- **PHPUnit** — esecuzione dei test automatici.
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Documentazione API
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+La documentazione dell'API è disponibile nel file [`docs/API.md`](docs/API.md).
 
-## Agentic Development
+Include le istruzioni per l'autenticazione, la descrizione degli endpoint, gli esempi di richiesta e i principali codici di risposta HTTP.
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+## Sicurezza
+
+Il progetto include:
+
+- Autenticazione per le rotte web protette.
+- Autenticazione dell'API tramite token Bearer.
+- Separazione della cronologia in base all'utente autenticato.
+- Gestione della chiave API tramite variabili d'ambiente.
+- Test automatici per validazione, accesso ai dati, salvataggio dei risultati e gestione degli errori.
+
+## Test automatici
+
+Per eseguire la suite di test, utilizzare il comando:
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+php artisan test
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+## Installazione in ambiente locale
 
-## Contributing
+1. Clonare il repository.
+2. Installare le dipendenze PHP:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+    ```bash
+    composer install
+    ```
 
-## Code of Conduct
+3. Creare il file di configurazione locale:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+    ```bash
+    cp .env.example .env
+    ```
 
-## Security Vulnerabilities
+4. Generare la chiave dell'applicazione:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+    ```bash
+    php artisan key:generate
+    ```
 
-## License
+5. Configurare le credenziali del database e la chiave API di AbuseIPDB nel file `.env`.
+6. Eseguire le migrazioni:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    ```bash
+    php artisan migrate
+    ```
+
+7. Avviare il server di sviluppo:
+
+    ```bash
+    php artisan serve
+    ```
+
+Le impostazioni del database devono essere adattate all'ambiente locale utilizzato.
+
+**Importante:** non pubblicare il file `.env` e non inserire chiavi API o altre credenziali nei file versionati.
+
+## Stato del progetto
+
+ThreatScope è un progetto in evoluzione, realizzato per approfondire Laravel e sviluppare competenze pratiche nello sviluppo backend, nelle API REST e nella sicurezza delle applicazioni web.
