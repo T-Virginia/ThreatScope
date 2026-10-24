@@ -13,7 +13,12 @@ class ThreatsController extends Controller
     public function threats(ThreatLookupRequest $request, AbuseIpdbService $abuseIpdb)
     {
         $ip = $request->validated('ip');
-        $risultato = $abuseIpdb->checkIp($ip);
+
+        try {
+            $risultato = $abuseIpdb->checkIp($ip);
+        } catch (\RuntimeException $e) {
+            return response()->view('errors.abuseipdb', [], 502);
+        }
 
         $user = Auth::user();
 
