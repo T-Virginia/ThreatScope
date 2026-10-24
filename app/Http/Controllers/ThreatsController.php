@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ThreatLookupRequest;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 use App\Services\AbuseIpdbService;
 use Throwable;
 
@@ -98,6 +99,17 @@ class ThreatsController extends Controller
                 'id' => $lookup->id,
                 'ip_address' => $lookup->ip_address,
             ],
+        ]);
+    }
+
+    public function search(Request $request)
+    {
+        $validated = $request->validate([
+            'ip' => 'required|ip',
+        ]);
+
+        return redirect()->route('threats', [
+            'ip' => $validated['ip'],
         ]);
     }
 }
