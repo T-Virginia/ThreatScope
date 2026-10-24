@@ -6,6 +6,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\Models\User;
 use App\Models\ThreatLookup;
 use Tests\TestCase;
+use App\Services\AbuseIpdbService;
 
 class ThreatHistoryTest extends TestCase
 {
@@ -48,5 +49,41 @@ class ThreatHistoryTest extends TestCase
         $response->assertSee('1.1.1.1');
         $response->assertDontSee('8.8.8.8');
     }
+
+    public function test_invalid_ip_is_rejected(): void
+    {
+        $user = User::factory()->create();
+
+        $response = $this->actingAs($user)
+            ->get('/threats/ciao');
+
+        $response->assertSessionHasErrors('ip');
+    }
+
+
+    public function test_valid_ip_uses_abuseipdb_service(): void
+    {
+        $user = User::factory()->create();
+
+        $this->mock(AbuseIpdbService::class, function ($mock) {
+            $mock->shouldReceive('checkIp')
+                ->once()
+                ->with('8.8.8.8')
+                ->andReturn([
+                    'data' => [
+                        'ipAddress' => '8.8.8.8',
+                        'abuseConfidenceScore' => 0,
+                        'totalReports' => 0,
+                        'countryCode' => 'US',
+                        'isp' => 'Example ISP',
+                    ],
+                ]);
+        });
+
+        $response = $this->actingAs($user)->get('/threats/8.8.8.8');
+
+        $response->assertOk();
+    }
+
 
 }
