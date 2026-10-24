@@ -86,4 +86,36 @@ class ThreatHistoryTest extends TestCase
     }
 
 
+    public function test_valid_ip_saves_abuseipdb_results(): void
+    {
+        $user = User::factory()->create();
+
+        $this->mock(AbuseIpdbService::class, function ($mock) {
+            $mock->shouldReceive('checkIp')
+                ->once()
+                ->with('8.8.8.8')
+                ->andReturn([
+                    'data' => [
+                        'ipAddress' => '8.8.8.8',
+                        'abuseConfidenceScore' => 10,
+                        'totalReports' => 3,
+                        'countryCode' => 'US',
+                        'isp' => 'Example ISP',
+                    ],
+                ]);
+        });
+
+        $this->actingAs($user)->get('/threats/8.8.8.8');
+
+        $this->assertDatabaseHas('threat_lookups', [
+            'user_id' => $user->id,
+            'ip_address' => '8.8.8.8',
+            'abuse_confidence_score' => 10,
+            'total_reports' => 3,
+            'country_code' => 'US',
+            'isp' => 'Example ISP',
+        ]);
+    }
+
+
 }
