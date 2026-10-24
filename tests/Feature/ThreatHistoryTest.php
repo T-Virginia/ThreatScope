@@ -118,4 +118,24 @@ class ThreatHistoryTest extends TestCase
     }
 
 
+    public function test_abuseipdb_failure_returns_502(): void
+    {
+        $user = User::factory()->create();
+
+        $this->mock(AbuseIpdbService::class, function ($mock) {
+            $mock->shouldReceive('checkIp')
+                ->once()
+                ->with('8.8.8.8')
+                ->andThrow(new \RuntimeException(
+                    'Errore nella richiesta ad AbuseIPDB.'
+                ));
+        });
+
+        $response = $this->actingAs($user)->get('/threats/8.8.8.8');
+
+        $response->assertStatus(502);
+        $response->assertViewIs('errors.abuseipdb');
+    }
+
+
 }
