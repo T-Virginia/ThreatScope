@@ -8,9 +8,15 @@ use App\Models\User;
 
 class ThreatLookup extends Model
 {
-    protected $fillable = ['ip_address'];
+    protected $fillable = [
+        'ip_address',
+        'abuse_confidence_score',
+        'total_reports',
+        'country_code',
+        'isp',
+    ];
 
-    public function user() : BelongsTo
+    public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
