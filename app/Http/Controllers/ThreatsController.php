@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ThreatLookupRequest;
-use App\Models\ThreatLookup;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
 
 class ThreatsController extends Controller
@@ -53,12 +53,16 @@ class ThreatsController extends Controller
             ->where('ip_address', $ip)
             ->first();
 
+        Log::error("Record non trovato per l'utente: " . $user->name, ['user_id' => $user->id]);
+
         if (!$lookup) {
             return response()->json([
                 'success' => false,
                 'message' => 'Risorsa non trovata.',
             ], 404);
         }
+
+        Log::info("Record trovato per l'utente: " . $user->name, ['user_id' => $user->id]);
 
         return response()->json([
             'success' => true,
