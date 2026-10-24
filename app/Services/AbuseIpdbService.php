@@ -9,7 +9,6 @@ class AbuseIpdbService
 {
     public function checkIp(string $ip): array
     {
-
         try {
             $response = Http::timeout(10)->withHeaders([
                 'Key' => config('services.abuseipdb.key'),
