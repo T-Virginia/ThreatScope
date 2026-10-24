@@ -36,7 +36,7 @@ class ThreatsController extends Controller
         return view('threats-history', ['records' => $records]);
     }
 
-    public function showApi(string $ip)
+    public function showApi(ThreatLookupRequest $request)
     {
         $user = request()->user();
 
@@ -46,6 +46,8 @@ class ThreatsController extends Controller
                 'message' => 'Non autenticato.',
             ], 401);
         }
+
+        $ip = $request->validated('ip');
 
         $lookup = $user->threatLookups()
             ->where('ip_address', $ip)

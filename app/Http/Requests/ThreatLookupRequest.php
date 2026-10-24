@@ -15,12 +15,6 @@ class ThreatLookupRequest extends FormRequest
         return true;
     }
 
-    public function validationData(): array
-    {
-        return array_merge($this->all(), [
-            'ip' => $this->route('ip'),
-        ]);
-    }
     /**
      * Get the validation rules that apply to the request.
      *
@@ -31,5 +25,12 @@ class ThreatLookupRequest extends FormRequest
         return [
         'ip' => 'required|ip',
         ];
+    }
+
+    public function validationData(): array
+    {
+        return array_merge($this->all(), [
+            'ip' => $this->route('ip'),
+        ]);
     }
 }
