@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ThreatLookupRequest;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
+use Throwable;
 
 class ThreatsController extends Controller
 {
@@ -49,11 +50,19 @@ class ThreatsController extends Controller
 
         $ip = $request->validated('ip');
 
-        $lookup = $user->threatLookups()
-            ->where('ip_address', $ip)
-            ->first();
+        try {
+            $lookup = $user->threatLookups()
+                ->where('ip_address', $ip)
+                ->first();
+        } catch (Throwable $e) {
 
-        Log::error("Record non trovato per l'utente: " . $user->name, ['user_id' => $user->id]);
+            Log::error("Errore durante la ricerca", ['ip' => $ip, 'exception' => $e->getMessage()]);
+
+            return response()->json([
+            'success' => false,
+            'message' => 'Servizio non disponibile.',
+            ], 500);
+        }
 
         if (!$lookup) {
             return response()->json([
@@ -74,3 +83,41 @@ class ThreatsController extends Controller
         ]);
     }
 }
+public function showApi(ThreatLookupRequest $request)
+    {
+        $user = request()->user();
+
+        if (!$user) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Non autenticato.',
+            ], 401);
+        }
+
+        $ip = $request->validated('ip');
+
+        try {
+            $lookup = $user->threatLookups()
+                ->where('ip_address', $ip)
+                ->first();
+        } catch (Throwable $e) {
+
+            Log::error("Errore durante la ricerca", ['ip' => $ip, 'exception' => $e->getMessage()]);
+
+            return response()->json([
+               'success' => false,
+               'message' => 'Servizio non disponibile.',
+            ], 404);
+        }
+
+        Log::info("Record trovato per l'utente: " . $user->name, ['user_id' => $user->id]);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'IP trovato.',
+            'data' => [
+                'id' => $lookup->id,
+                'ip_address' => $lookup->ip_address,
+            ],
+        ]);
+    }
