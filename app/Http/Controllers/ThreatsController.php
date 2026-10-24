@@ -28,6 +28,10 @@ class ThreatsController extends Controller
 
         $user->threatLookups()->create([
             'ip_address' => $ip,
+            'abuse_confidence_score' => $risultato['data']['abuseConfidenceScore'] ?? null,
+            'total_reports' => $risultato['data']['totalReports'] ?? null,
+            'country_code' => $risultato['data']['countryCode'] ?? null,
+            'isp' => $risultato['data']['isp'] ?? null,
         ]);
 
         return view(
