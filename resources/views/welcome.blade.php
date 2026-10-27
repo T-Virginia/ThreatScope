@@ -11,18 +11,27 @@
 <body class="min-h-screen bg-slate-100 font-sans text-slate-800">
 
     <header class="border-b border-slate-200 bg-slate-900 text-white">
-        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        <div class="mx-auto flex max-w-7xl items-center px-6 py-4">
             <a href="/dashboard" class="text-2xl font-bold tracking-tight">
                 Threat<span class="text-blue-400">Scope</span>
             </a>
+            <div class="ml-auto flex items-center gap-2">
+                <a type="button"
+                    class="rounded-lg border border-slate-600 px-4 py-2 text-sm font-medium transition hover:bg-slate-700"
+                    href="{{ url('/login') }}">
+                    Login
+                </a>
+                @auth
 
-            <form action="{{ route('logout') }}" method="POST">
-                @csrf
-                <button type="submit"
-                    class="rounded-lg border border-slate-600 px-4 py-2 text-sm font-medium transition hover:bg-slate-700">
-                    Esci
-                </button>
-            </form>
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit"
+                            class="rounded-lg border border-slate-600 px-4 py-2 text-sm font-medium transition hover:bg-slate-700">
+                            Esci
+                        </button>
+                    </form>
+                @endauth
+            </div>
         </div>
     </header>
 
@@ -33,7 +42,7 @@
             </p>
 
             <h1 class="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
-                La tua dashboard
+                Benvenuto
             </h1>
 
             <p class="mt-3 max-w-2xl text-slate-600">
