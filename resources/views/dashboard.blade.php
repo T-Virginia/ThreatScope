@@ -1,30 +1,11 @@
 <!DOCTYPE html>
 <html lang="it">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | ThreatScope</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
+<x-head />
 
 <body class="min-h-screen bg-slate-100 font-sans text-slate-800">
 
-    <header class="border-b border-slate-200 bg-slate-900 text-white">
-        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-            <a href="/dashboard" class="text-2xl font-bold tracking-tight">
-                Threat<span class="text-blue-400">Scope</span>
-            </a>
-
-            <form action="{{ route('logout') }}" method="POST">
-                @csrf
-                <button type="submit"
-                    class="rounded-lg border border-slate-600 px-4 py-2 text-sm font-medium transition hover:bg-slate-700">
-                    Esci
-                </button>
-            </form>
-        </div>
-    </header>
+    <x-navbar />
 
     <main class="mx-auto max-w-7xl px-6 py-10">
         <section class="mb-8">
@@ -92,9 +73,7 @@
             </a>
         </section>
 
-        <footer class="mt-12 border-t border-slate-200 pt-5 text-sm text-slate-500">
-            ThreatScope · Piattaforma di Threat Intelligence
-        </footer>
+        <x-footer />
     </main>
 
 </body>

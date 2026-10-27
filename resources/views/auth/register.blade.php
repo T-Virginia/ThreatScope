@@ -1,5 +1,12 @@
-<div>
-    <main>
+<!DOCTYPE html>
+<html lang="it">
+
+<x-head />
+
+<body class="min-h-screen bg-slate-100 font-sans text-slate-800">
+    <x-navbar />
+
+    <main class="mx-auto max-w-7xl px-6 py-10">
         <form action="{{ route('register') }}" method="POST">
             @csrf
             <p>Registrati</p>
@@ -18,5 +25,8 @@
                 @endforeach
             @endif
         </form>
+        <x-footer />
     </main>
-</div>
+</body>
+
+</html>
