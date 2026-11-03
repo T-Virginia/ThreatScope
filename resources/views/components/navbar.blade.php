@@ -12,7 +12,7 @@
                     Login
                 </a>
                 <a type="button"
-                    class="rounded-lg border border-slate-600 px-4 py-2 text-sm font-medium transition hover:bg-slate-700"
+                    class="rounded-lg bg-brand border border-slate-600 px-4 py-2 text-sm font-medium transition hover:bg-slate-700"
                     href="{{ url('/register') }}">
                     Registrati
                 </a>
