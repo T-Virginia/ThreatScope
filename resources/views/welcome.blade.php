@@ -37,6 +37,21 @@
                 </div>
             </div>
         </section>
+        <section class="bg-neutral-primary bg-[#F8FAFC]">
+            <div class="py-8 px-4 mx-auto max-w-screen-2xl lg:py-16">
+                <div class="text-center">
+                    <span
+                        class="text-body bg-blue-100 box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-full text-sm px-4 py-2.5 focus:outline-none">
+                        Tutto quello che ti serve
+                    </span>
+                    <h1 class="mb-6 mt-12 text-4xl font-bold tracking-tighter text-heading md:text-5xl lg:text-6xl">
+                        Funzionalità principali
+                    </h1>
+                    <p class="mb-8 text-base text-gray-600 font-normal text-body md:text-xl">
+                        Strumenti semplici e potenti per restare al sicuro online.</p>
+                </div>
+            </div>
+        </section>
 
         <x-footer />
 
