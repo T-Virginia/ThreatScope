@@ -37,8 +37,8 @@
                 </div>
             </div>
         </section>
-        <section class="bg-neutral-primary bg-[#F8FAFC]">
-            <div class="py-8 px-4 mx-auto max-w-screen-2xl lg:py-16">
+        <section class="bg-neutral-primary bg-[#F8FAFC] max-w-screen-2xl">
+            <div class="py-8 px-4 mx-auto lg:py-16">
                 <div class="text-center">
                     <span
                         class="text-body bg-blue-100 box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-full text-sm px-4 py-2.5 focus:outline-none">
@@ -52,8 +52,9 @@
                 </div>
             </div>
             {{--     gruppo card --}}
-            <div class="flex flex-wrap justify-center gap-4 mx-auto my-auto max-w-full" role="group">
-                <div class="bg-neutral-primary-soft block max-w-sm p-6 border rounded-2xl shadow-xs">
+            <div class="flex flex-wrap justify-center gap-12 mx-auto my-auto max-w-full" role="group">
+                <div
+                    class="bg-neutral-primary bg-[#FFFF] w-80 block max-w-sm p-6 border border-gray-300 rounded-2xl shadow-xs">
                     <span
                         class="inline-flex items-center bg-blue-200 text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-2xl">
                         <svg class="w-[24px] h-[24px] text-blue-600" aria-hidden="true"
@@ -69,7 +70,8 @@
                         AbuselIPDB.</p>
                     <x-arrow_button />
                 </div>
-                <div class="bg-neutral-primary-soft block max-w-sm p-6 border rounded-2xl shadow-xs">
+                <div
+                    class="bg-neutral-primary bg-[#FFFF] w-80 block max-w-sm p-6 border border-gray-300 rounded-2xl shadow-xs">
                     <span
                         class="inline-flex text-green items-center bg-emerald-200 text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-2xl">
                         <svg class="w-6 h-6 text-green" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +86,8 @@
                         sospette.</p>
                     <x-arrow_button />
                 </div>
-                <div class="bg-neutral-primary-soft block max-w-sm p-6 border rounded-2xl shadow-xs">
+                <div
+                    class="bg-neutral-primary bg-[#FFFF] w-80 block max-w-sm p-6 border border-gray-300 rounded-2xl shadow-xs">
                     <span
                         class="inline-flex text-green items-center bg-violet-300 text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-2xl">
                         <svg class="w-6 h-6 text-violet-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +103,8 @@
                     <p class="text-body mb-6 text-gray-600">Rivedi le tue ultime analisi e monitora i trend.</p>
                     <x-arrow_button />
                 </div>
-                <div class="bg-neutral-primary-soft block max-w-sm p-6 border rounded-2xl shadow-xs">
+                <div
+                    class="bg-neutral-primary bg-[#FFFF] w-80 block max-w-sm p-6 border border-gray-300 rounded-2xl shadow-xs">
                     <span
                         class="inline-flex text-green items-center bg-yellow-400 text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-2xl">
                         <svg class="w-[24px] h-[24px] text-yellow-800" aria-hidden="true"
@@ -119,7 +123,7 @@
                 </div>
             </div>
             {{--     gruppo card --}}
-            <div class="bg-blue-100 block p-6 border rounded-2xl shadow-xs mt-8 border-gray-300 flex">
+            <div class="bg-blue-100 block p-6 border rounded-2xl shadow-xs mt-8 border-gray-300 flex ml-12 mr-12">
                 <div class="border border-blue-100 w-20 rounded-2xl p-6 bg-blue-200 mr-6">
                     <span
                         class="iinline-flex items-center bg-blue-200 text-fg-brand-strong text-xs font-medium py-0.5 rounded-2xl">
@@ -133,9 +137,11 @@
                 </div>
                 <div class="mt-3">
                     <h4 class="font-bold">Proteggi la tua infrastruttura</h4>
-                    <p>ThreatScope è pensato per i professionisti della sicurezza, system administrator e aziende che
+                    <p>ThreatScope è pensato per i professionisti della sicurezza, system administrator e aziende
+                        che
                         vogliono tenere sotto controllo la propria esposizione online.</p>
                 </div>
+            </div>
         </section>
         <x-footer />
     </main>
