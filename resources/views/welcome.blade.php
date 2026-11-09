@@ -51,8 +51,76 @@
                         Strumenti semplici e potenti per restare al sicuro online.</p>
                 </div>
             </div>
-        </section>
+            {{--     gruppo card --}}
+            <div class="flex flex-wrap justify-center gap-4 mx-auto my-auto max-w-full" role="group">
+                <div class="bg-neutral-primary-soft block max-w-sm p-6 border rounded-2xl shadow-xs">
+                    <span
+                        class="inline-flex text-green items-center bg-blue-200 text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-2xl">
+                        <svg class="w-[24px] h-[24px] text-blue-600" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                            viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" />
+                        </svg>
 
+                    </span>
+                    <h5 class="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8">Ricerca IP
+                    </h5>
+                    <p class="text-body mb-6 text-gray-600">Inserisci un indirizzo IP e consulta la sua reputaione su
+                        AbuselIPDB.</p>
+                    <x-arrow_button />
+                </div>
+                <div class="bg-neutral-primary-soft block max-w-sm p-6 border rounded-2xl shadow-xs">
+                    <span
+                        class="inline-flex text-green items-center bg-emerald-200 text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-2xl">
+                        <svg class="w-6 h-6 text-green" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.5 11.5 11 13l4-3.5M12 20a16.405 16.405 0 0 1-5.092-5.804A16.694 16.694 0 0 1 5 6.666L12 4l7 2.667a16.695 16.695 0 0 1-1.908 7.529A16.406 16.406 0 0 1 12 20Z" />
+                        </svg>
+                    </span>
+                    <h5 class="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8">Analisi delle minacce
+                    </h5>
+                    <p class="text-body mb-6 text-gray-600">Scopri se un IP è associato a spam, malware o attività
+                        sospette.</p>
+                    <x-arrow_button />
+                </div>
+                <div class="bg-neutral-primary-soft block max-w-sm p-6 border rounded-2xl shadow-xs">
+                    <span
+                        class="inline-flex text-green items-center bg-violet-300 text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-2xl">
+                        <svg class="w-6 h-6 text-violet-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+
+                    </span>
+                    <h5 class="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8">Cronologia delle
+                        ricerche
+                    </h5>
+                    <p class="text-body mb-6 text-gray-600">Rivedi le tue ultime analisi e monitora i trend.</p>
+                    <x-arrow_button />
+                </div>
+                <div class="bg-neutral-primary-soft block max-w-sm p-6 border rounded-2xl shadow-xs">
+                    <span
+                        class="inline-flex text-green items-center bg-yellow-400 text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-2xl">
+                        <svg class="w-[24px] h-[24px] text-yellow-800" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                            viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 15v4m6-6v6m6-4v4m6-6v6M3 11l6-5 6 5 5.5-5.5" />
+                        </svg>
+
+                    </span>
+                    <h5 class="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8">Report dettagliati
+                    </h5>
+                    <p class="text-body mb-6 text-gray-600">Ottieni informazioni complete su paese, provider e livello
+                        di rischio.</p>
+                    <x-arrow_button />
+                </div>
+            </div>
+            {{--     gruppo card --}}
+        </section>
         <x-footer />
 
     </main>
