@@ -55,14 +55,13 @@
             <div class="flex flex-wrap justify-center gap-4 mx-auto my-auto max-w-full" role="group">
                 <div class="bg-neutral-primary-soft block max-w-sm p-6 border rounded-2xl shadow-xs">
                     <span
-                        class="inline-flex text-green items-center bg-blue-200 text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-2xl">
+                        class="inline-flex items-center bg-blue-200 text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-2xl">
                         <svg class="w-[24px] h-[24px] text-blue-600" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
                             viewBox="0 0 24 24">
                             <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
                                 d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" />
                         </svg>
-
                     </span>
                     <h5 class="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8">Ricerca IP
                     </h5>
@@ -120,9 +119,25 @@
                 </div>
             </div>
             {{--     gruppo card --}}
+            <div class="bg-blue-100 block p-6 border rounded-2xl shadow-xs mt-8 border-gray-300 flex">
+                <div class="border border-blue-100 w-20 rounded-2xl p-6 bg-blue-200 mr-6">
+                    <span
+                        class="iinline-flex items-center bg-blue-200 text-fg-brand-strong text-xs font-medium py-0.5 rounded-2xl">
+                        <svg class="w-6 h-6 text-blue-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9.5 11.5 11 13l4-3.5M12 20a16.405 16.405 0 0 1-5.092-5.804A16.694 16.694 0 0 1 5 6.666L12 4l7 2.667a16.695 16.695 0 0 1-1.908 7.529A16.406 16.406 0 0 1 12 20Z" />
+                        </svg>
+                    </span>
+                </div>
+                <div class="mt-3">
+                    <h4 class="font-bold">Proteggi la tua infrastruttura</h4>
+                    <p>ThreatScope è pensato per i professionisti della sicurezza, system administrator e aziende che
+                        vogliono tenere sotto controllo la propria esposizione online.</p>
+                </div>
         </section>
         <x-footer />
-
     </main>
 </body>
 
