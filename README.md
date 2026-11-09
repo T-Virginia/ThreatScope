@@ -89,6 +89,10 @@ Le impostazioni del database devono essere adattate all'ambiente locale utilizza
 
 **Importante:** non pubblicare il file `.env` e non inserire chiavi API o altre credenziali nei file versionati.
 
+## Crediti e Licenze
+
+- **Immagine nel file Welcome**: Foto di <a href="https://unsplash.com/it/@redaquamedia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Denny Müller</a> su <a href="https://unsplash.com/it/foto/luce-bianca-e-blu-in-una-stanza-buia-JyRTi3LoQnc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.
+
 ## Stato del progetto
 
 ThreatScope è un progetto in evoluzione, realizzato per approfondire Laravel e sviluppare competenze pratiche nello sviluppo backend, nelle API REST e nella sicurezza delle applicazioni web.

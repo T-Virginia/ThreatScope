@@ -8,7 +8,7 @@
     <x-navbar />
 
     <main class="mx-auto">
-        <section class="bg-neutral-primary bg-slate-900">
+        <section class="bg-neutral-primary bg-slate-900 flex">
             <div class="py-8 px-4 mx-auto max-w-screen-2xl lg:py-16">
                 <span
                     class="inline-flex text-white items-center bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-2xl">
@@ -36,9 +36,12 @@
                         AbuselIPDB.</p>
                 </div>
             </div>
+            <div class="max-w-2xl p-8">
+                <img src="{{ Vite::asset('resources/images/rete.jpg') }}" alt="mondo connesso">
+            </div>
         </section>
         <section class="bg-neutral-primary bg-[#F8FAFC] max-w-screen-2xl">
-            <div class="py-8 px-4 mx-auto lg:py-16">
+            <div class="py-8 px-4 mx-auto">
                 <div class="text-center">
                     <span
                         class="text-body bg-blue-100 box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-full text-sm px-4 py-2.5 focus:outline-none">
