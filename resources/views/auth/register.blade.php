@@ -65,7 +65,8 @@
                                         class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft" />
                                 </div>
                                 <label for="termini" class="ms-2 text-sm font-medium text-heading">Accetto i <a
-                                        href="#">termini di servizio</a> e <a href="#">l'informativa sulla
+                                        href="#" class="text-blue-700">termini di servizio</a> e <a href="#"
+                                        class="text-blue-700">l'informativa sulla
                                         privacy</a></label>
                             </div>
                             <button type="submit"
