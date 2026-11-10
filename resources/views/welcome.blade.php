@@ -9,7 +9,7 @@
 
     <main class="mx-auto">
         <section class="bg-neutral-primary bg-slate-900 flex">
-            <div class="py-8 px-4 mx-auto max-w-screen-2xl lg:py-16">
+            <div class="py-8 px-4 mx-auto max-w-screen-2xl lg:py-16 ml-12">
                 <span
                     class="inline-flex text-white items-center bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-2xl">
                     <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
@@ -36,11 +36,11 @@
                         AbuselIPDB.</p>
                 </div>
             </div>
-            <div class="max-w-2xl p-8">
+            <div class="max-w-2xl p-8 mr-12">
                 <img src="{{ Vite::asset('resources/images/rete.jpg') }}" alt="mondo connesso">
             </div>
         </section>
-        <section class="bg-neutral-primary bg-[#F8FAFC] max-w-screen-2xl">
+        <section class="bg-neutral-primary bg-[#F8FAFC]">
             <div class="py-8 px-4 mx-auto">
                 <div class="text-center">
                     <span
@@ -57,7 +57,7 @@
             {{--     gruppo card --}}
             <div class="flex flex-wrap justify-center gap-12 mx-auto my-auto max-w-full" role="group">
                 <div
-                    class="bg-neutral-primary bg-[#FFFF] w-80 block max-w-sm p-6 border border-gray-300 rounded-2xl shadow-xs">
+                    class="bg-neutral-primary bg-[#FFFF] block max-w-sm p-6 border border-gray-300 rounded-2xl shadow-xs">
                     <span
                         class="inline-flex items-center bg-blue-200 text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-2xl">
                         <svg class="w-[24px] h-[24px] text-blue-600" aria-hidden="true"
@@ -69,12 +69,12 @@
                     </span>
                     <h5 class="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8">Ricerca IP
                     </h5>
-                    <p class="text-body mb-6 text-gray-600">Inserisci un indirizzo IP e consulta la sua reputaione su
+                    <p class="text-body mb-6 text-gray-600">Inserisci un indirizzo IP e consulta la sua reputazione su
                         AbuselIPDB.</p>
                     <x-arrow_button />
                 </div>
                 <div
-                    class="bg-neutral-primary bg-[#FFFF] w-80 block max-w-sm p-6 border border-gray-300 rounded-2xl shadow-xs">
+                    class="bg-neutral-primary bg-[#FFFF] block max-w-sm p-6 border border-gray-300 rounded-2xl shadow-xs">
                     <span
                         class="inline-flex text-green items-center bg-emerald-200 text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-2xl">
                         <svg class="w-6 h-6 text-green" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +90,7 @@
                     <x-arrow_button />
                 </div>
                 <div
-                    class="bg-neutral-primary bg-[#FFFF] w-80 block max-w-sm p-6 border border-gray-300 rounded-2xl shadow-xs">
+                    class="bg-neutral-primary bg-[#FFFF] block max-w-sm p-6 border border-gray-300 rounded-2xl shadow-xs">
                     <span
                         class="inline-flex text-green items-center bg-violet-300 text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-2xl">
                         <svg class="w-6 h-6 text-violet-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +107,7 @@
                     <x-arrow_button />
                 </div>
                 <div
-                    class="bg-neutral-primary bg-[#FFFF] w-80 block max-w-sm p-6 border border-gray-300 rounded-2xl shadow-xs">
+                    class="bg-neutral-primary bg-[#FFFF] block max-w-sm p-6 border border-gray-300 rounded-2xl shadow-xs">
                     <span
                         class="inline-flex text-green items-center bg-yellow-400 text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-2xl">
                         <svg class="w-[24px] h-[24px] text-yellow-800" aria-hidden="true"
