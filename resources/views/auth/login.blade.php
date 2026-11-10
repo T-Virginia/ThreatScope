@@ -5,7 +5,6 @@
 
 <body class="min-h-screen bg-slate-100 font-sans text-slate-800">
     <x-navbar />
-
     <main class="mx-auto">
         <section class="w-full flex items-center gap-6">
             <div class="bg-neutral-primary bg-slate-900 max-w-6xl">
