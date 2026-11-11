@@ -71,7 +71,7 @@
                     </h5>
                     <p class="text-body mb-6 text-gray-600">Inserisci un indirizzo IP e consulta la sua reputazione su
                         AbuselIPDB.</p>
-                    <x-arrow_button />
+                    <x-arrow_button page="/dashboard" />
                 </div>
                 <div
                     class="bg-neutral-primary bg-[#FFFF] block max-w-sm p-6 border border-gray-300 rounded-2xl shadow-xs">
