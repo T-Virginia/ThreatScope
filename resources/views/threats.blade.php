@@ -10,10 +10,10 @@
     <main class="mx-auto max-w-7xl px-6 py-10">
 
         <div>
-            <h2>IP: {{ $ip }}</h2>
+            <h2 class="font-bold">IP: {{ $ip }}</h2>
         </div>
 
-        <h2>Risultati AbuseIPDB</h2>
+        <h2 class="font-bold">Risultati AbuseIPDB</h2>
 
         <p>
             <strong>Punteggio di abuso:</strong>
