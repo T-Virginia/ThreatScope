@@ -24,6 +24,11 @@
                     href="{{ url('/dashboard') }}">
                     Dashboard
                 </a>
+                <a type="button"
+                    class="rounded-lg border border-slate-600 px-4 py-2 text-sm font-medium transition hover:bg-slate-700"
+                    href="{{ url('/history') }}">
+                    Storico
+                </a>
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button type="submit"
