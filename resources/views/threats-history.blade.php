@@ -52,7 +52,19 @@
                                         {{ $record->ip_address }}
                                     </th>
                                     <td class="px-6 py-4">
-                                        {{ $record->abuse_confidence_score ?? 'N/D' }}
+                                        @if ($record->abuse_confidence_score <= 50)
+                                            <span
+                                                class="bg-red-500 text-fg-success-strong font-medium px-1.5 py-0.5 rounded">
+                                                {{ $record->abuse_confidence_score ?? 'N/D' }}</span>
+                                        @elseif ($record->abuse_confidence_score <= 80)
+                                            <span
+                                                class="bg-orange-500 text-fg-warning font-medium px-1.5 py-0.5 rounded">
+                                                {{ $record->abuse_confidence_score ?? 'N/D' }}</span>
+                                        @elseif ($record->abuse_confidence_score > 80)
+                                            <span
+                                                class="bg-red-500 text-fg-danger-strong font-medium px-1.5 py-0.5 rounded">
+                                                {{ $record->abuse_confidence_score ?? 'N/D' }}</span>
+                                        @endif
                                     </td>
                                     <td class="px-6 py-4">
                                         {{ $record->total_reports ?? 'N/D' }}
