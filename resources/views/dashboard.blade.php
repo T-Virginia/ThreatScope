@@ -7,24 +7,21 @@
 
     <x-navbar />
 
-    <main class="mx-auto max-w-7xl px-6 py-10">
-        <section class="mb-8">
+    <main class="mx-auto">
+        <section class="px-6 py-10">
             <p class="mb-2 text-sm font-semibold uppercase tracking-widest text-blue-600">
                 Threat Intelligence
             </p>
-
             <h1 class="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
                 La tua dashboard
             </h1>
-
             <p class="mt-3 max-w-2xl text-slate-600">
                 Analizza la reputazione degli indirizzi IP e consulta i risultati
                 delle tue ricerche.
             </p>
         </section>
 
-        <section class="grid gap-6 md:grid-cols-2">
-
+        <section class="grid gap-6 md:grid-cols-2 max-w-7xl px-6 py-10 mx-auto">
             <div
                 class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-md">
                 <div class="mb-4 flex size-12 items-center justify-center rounded-xl bg-blue-100 text-xl text-blue-700">

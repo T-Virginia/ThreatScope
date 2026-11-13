@@ -5,8 +5,8 @@
 
 <body class="min-h-screen bg-slate-100 font-sans text-slate-800">
     <x-navbar />
-    <main class="mx-auto max-w-7xl px-6 py-10">
-        <section class="mb-8">
+    <main class="mx-auto">
+        <section class="px-6 py-10">
             <p class="mb-2 text-sm font-semibold uppercase tracking-widest text-blue-600">
                 Threat Intelligence
             </p>
@@ -17,7 +17,7 @@
                 Tutte le analisi che hai effettuato nel tempo.
             </p>
         </section>
-        <section>
+        <section class="mr-4 ml-4">
             <div
                 class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border rounded-2xl border-default">
                 <table class="w-full text-sm text-left rtl:text-right text-body">

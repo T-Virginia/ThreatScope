@@ -40,7 +40,7 @@
                 <img src="{{ Vite::asset('resources/images/rete.jpg') }}" alt="mondo connesso">
             </div>
         </section>
-        <section class="bg-neutral-primary bg-[#F8FAFC]">
+        <section class="bg-primary">
             <div class="py-8 px-4 mx-auto">
                 <div class="text-center">
                     <span
@@ -56,8 +56,7 @@
             </div>
             {{--     gruppo card --}}
             <div class="flex flex-wrap justify-center gap-12 mx-auto my-auto max-w-full" role="group">
-                <div
-                    class="bg-neutral-primary bg-[#FFFF] block max-w-sm p-6 border border-gray-300 rounded-2xl shadow-xs">
+                <div class="bg-[#FFFF] block max-w-sm p-6 border border-gray-300 rounded-2xl shadow-xs">
                     <span
                         class="inline-flex items-center bg-blue-200 text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-2xl">
                         <svg class="w-[24px] h-[24px] text-blue-600" aria-hidden="true"
@@ -73,8 +72,7 @@
                         AbuselIPDB.</p>
                     <x-arrow_button page="/dashboard" />
                 </div>
-                <div
-                    class="bg-neutral-primary bg-[#FFFF] block max-w-sm p-6 border border-gray-300 rounded-2xl shadow-xs">
+                <div class="bg-[#FFFF] block max-w-sm p-6 border border-gray-300 rounded-2xl shadow-xs">
                     <span
                         class="inline-flex text-green items-center bg-emerald-200 text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-2xl">
                         <svg class="w-6 h-6 text-green" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -89,8 +87,7 @@
                         sospette.</p>
                     <x-arrow_button />
                 </div>
-                <div
-                    class="bg-neutral-primary bg-[#FFFF] block max-w-sm p-6 border border-gray-300 rounded-2xl shadow-xs">
+                <div class="bg-[#FFFF] block max-w-sm p-6 border border-gray-300 rounded-2xl shadow-xs">
                     <span
                         class="inline-flex text-green items-center bg-violet-300 text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-2xl">
                         <svg class="w-6 h-6 text-violet-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -106,8 +103,7 @@
                     <p class="text-body mb-6 text-gray-600">Rivedi le tue ultime analisi e monitora i trend.</p>
                     <x-arrow_button />
                 </div>
-                <div
-                    class="bg-neutral-primary bg-[#FFFF] block max-w-sm p-6 border border-gray-300 rounded-2xl shadow-xs">
+                <div class="bg-[#FFFF] block max-w-sm p-6 border border-gray-300 rounded-2xl shadow-xs">
                     <span
                         class="inline-flex text-green items-center bg-yellow-400 text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-2xl">
                         <svg class="w-[24px] h-[24px] text-yellow-800" aria-hidden="true"
@@ -127,7 +123,7 @@
             </div>
             {{--     gruppo card --}}
             <div class="bg-blue-100 block p-6 border rounded-2xl shadow-xs mt-8 border-gray-300 flex ml-12 mr-12">
-                <div class="border border-blue-100 w-20 rounded-2xl p-6 bg-blue-200 mr-6">
+                <div class="border border-blue-100 w-20 rounded-2xl p-6 r-6">
                     <span
                         class="iinline-flex items-center bg-blue-200 text-fg-brand-strong text-xs font-medium py-0.5 rounded-2xl">
                         <svg class="w-6 h-6 text-blue-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
