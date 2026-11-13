@@ -32,7 +32,7 @@
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button type="submit"
-                        class="rounded-lg border border-slate-600 px-4 py-2 text-sm font-medium transition hover:bg-slate-700">
+                        class="rounded-lg border border-slate-600 px-4 py-2 text-sm font-medium transition hover:bg-slate-700 bg-blue-600">
                         Esci
                     </button>
                 </form>
