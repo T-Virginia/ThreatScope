@@ -50,8 +50,7 @@ class ThreatsController extends Controller
         $records = Auth::user()
             ->threatLookups()
             ->orderBy('created_at', 'desc')
-            ->limit(10)
-            ->get();
+            ->paginate(10);
 
         return view('threats-history', ['records' => $records]);
     }

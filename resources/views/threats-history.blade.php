@@ -94,6 +94,9 @@
                     </tbody>
                 </table>
             </div>
+            <div class="mt-4">
+                {{ $records->links() }}
+            </div>
         </section>
         <x-footer />
     </main>
