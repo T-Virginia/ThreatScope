@@ -6,9 +6,9 @@
 <body class="min-h-screen bg-slate-100 font-sans text-slate-800">
     <x-navbar />
     <main class="mx-auto">
-        <section class="w-full flex items-center gap-6">
+        <section class="w-full flex flex-col lg:flex-row items-center gap-6">
             <div class="bg-neutral-primary bg-slate-900 max-w-6xl lg:max-w-2xl">
-                <div class="py-8 px-4 mx-auto max-w-screen-2xl ml-12 lg:py-16">
+                <div class="py-8 px-4 mx-auto max-w-screen-2xl lg:ml-12 lg:py-16">
                     <h1 class="mb-6 text-4xl font-bold tracking-tighter text-white text-heading md:text-5xl lg:text-6xl">
                         Threat
                         <span class="text-blue-400">Scope</span>
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="bg-neutral-primary flex">
-                <div class="bg-neutral-primary ml-12">
+                <div class="bg-neutral-primary lg:ml-12">
                     <p class="font-bold text-3xl">Accedi al tuo account</p>
                     <p class="text-gray-500 text-2xl">Inserisci le tue credenziali per continuare</p>
                     <form action="{{ route('login') }}" method="POST">
