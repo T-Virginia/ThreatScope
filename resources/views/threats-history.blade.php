@@ -80,7 +80,7 @@
                                         {{ $record->isp ?? 'N/D' }}
                                     </td>
                                     <td class="px-6 py-4">
-                                        {{ $record->created_at }}
+                                        {{ $record->created_at->format('d-m-Y H:i:s') }}
                                     </td>
                                 </tr>
                             @endforeach
