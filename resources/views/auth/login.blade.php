@@ -36,14 +36,14 @@
                                 <label for="email" class="block mb-2.5 text-sm font-medium text-heading">Email
                                     address</label>
                                 <input type="email" id="email"
-                                    class="bg-neutral-secondary-medium border border-default-medium rounded-2xl text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs"
+                                    class="placeholder:text-slate-400 bg-neutral-secondary-medium border border-default-medium rounded-2xl text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs"
                                     placeholder="john.doe@company.com" name="email" autocomplete="email" required>
                             </div>
                             <div class="mb-6">
                                 <label for="password"
                                     class="block mb-2.5 text-sm font-medium text-heading">Password</label>
                                 <input type="password" id="password" name="password" autocomplete="current-password"
-                                    class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-2xl rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs"
+                                    class="placeholder:text-slate-400 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-2xl rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs"
                                     placeholder="•••••••••"required>
                             </div>
                             <div class="flex items-start mb-6">
