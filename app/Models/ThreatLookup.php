@@ -14,6 +14,11 @@ class ThreatLookup extends Model
         'total_reports',
         'country_code',
         'isp',
+        'ip_version',
+        'is_white_listed',
+        'country_name',
+        'usage_type',
+        'is_tor',
     ];
 
     public function user(): BelongsTo

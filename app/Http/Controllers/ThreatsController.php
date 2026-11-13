@@ -33,6 +33,11 @@ class ThreatsController extends Controller
             'total_reports' => $risultato['data']['totalReports'] ?? null,
             'country_code' => $risultato['data']['countryCode'] ?? null,
             'isp' => $risultato['data']['isp'] ?? null,
+            'ip_version' => $risultato['data']['ipVersion'] ?? null,
+            'is_white_listed' => $risultato['data']['isWhitelisted'] ?? null,
+            'country_name' => $risultato['data']['countryName'] ?? null,
+            'usage_type' => $risultato['data']['usageType'] ?? null,
+            'is_tor' => $risultato['data']['isTor'] ?? null,
         ]);
 
         return view(
