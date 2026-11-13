@@ -85,7 +85,7 @@
                     </h5>
                     <p class="text-body mb-6 text-gray-600">Scopri se un IP è associato a spam, malware o attività
                         sospette.</p>
-                    <x-arrow_button />
+                    <x-arrow_button page="/dashboard" />
                 </div>
                 <div class="bg-[#FFFF] block max-w-sm p-6 border border-gray-300 rounded-2xl shadow-xs">
                     <span
@@ -101,7 +101,7 @@
                         ricerche
                     </h5>
                     <p class="text-body mb-6 text-gray-600">Rivedi le tue ultime analisi e monitora i trend.</p>
-                    <x-arrow_button />
+                    <x-arrow_button page="/history" />
                 </div>
                 <div class="bg-[#FFFF] block max-w-sm p-6 border border-gray-300 rounded-2xl shadow-xs">
                     <span
@@ -118,7 +118,7 @@
                     </h5>
                     <p class="text-body mb-6 text-gray-600">Ottieni informazioni complete su paese, provider e livello
                         di rischio.</p>
-                    <x-arrow_button />
+                    <x-arrow_button page="/history" />
                 </div>
             </div>
             {{--     gruppo card --}}
